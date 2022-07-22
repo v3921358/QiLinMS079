@@ -1,0 +1,404 @@
+ 
+
+var aaa = "#fUI/UIWindow.img/Quest/icon9/0#";
+var zzz = "#fUI/UIWindow.img/Quest/icon8/0#";
+var sss = "#fUI/UIWindow.img/QuestIcon/3/0#";
+
+//------------------------------------------------------------------------
+
+var chosenMap = -1;
+var monsters = 0;
+var towns = 0;
+var bosses = 0;
+var fuben = 0;
+
+//------------------------------------------------------------------------
+
+var acc = "#fEffect/CharacterEff/1112903/0/0#";//红桃心
+var aaa = "#fUI/UIWindow.img/Quest/icon9/0#";//红色右箭头
+var zzz = "#fUI/UIWindow.img/Quest/icon8/0#";//蓝色右箭头
+var sss = "#fUI/UIWindow.img/QuestIcon/3/0#";//选择道具
+var 蓝色角点 = "#fUI/UIWindow.img/PvP/Scroll/enabled/next2#";
+var 蓝色箭头 = "#fUI/UIWindow/Quest/icon2/7#";
+var 红色箭头 = "#fUI/UIWindow/Quest/icon6/7#";
+var 圆形 = "#fUI/UIWindow/Quest/icon3/6#";
+var 美化new = "#fUI/UIWindow/Quest/icon2/7#";
+var 美化ne = "#fUI/UIWindow/Quest/icon6/7#";
+var 感叹号 = "#fUI/UIWindow/Quest/icon0#";
+var 正方箭头 = "#fUI/Basic/BtHide3/mouseOver/0#";
+var 中条猫 ="#fUI/ChatBalloon/37/n#";
+var 猫右 =  "#fUI/ChatBalloon/37/ne#";
+var 猫左 =  "#fUI/ChatBalloon/37/nw#";
+var 右 =    "#fUI/ChatBalloon/37/e#";
+var 左 =    "#fUI/ChatBalloon/37/w#";
+var 下条猫 ="#fUI/ChatBalloon/37/s#";
+var 猫下右 ="#fUI/ChatBalloon/37/se#";
+var 猫下左 ="#fUI/ChatBalloon/37/sw#";
+var 皇冠白 ="#fUI/GuildMark/Mark/Etc/00009004/16#";
+var 蓝色角点 = "#fUI/UIWindow.img/PvP/Scroll/enabled/next2#";
+var 草莓 = "#fUI/GuildMark/Mark/Plant/00003000/1#"; // 红色草莓
+var 草莓1 = "#fUI/GuildMark/Mark/Plant/00003000/10#"; // 淡蓝色草莓
+var 草莓2 = "#fUI/GuildMark/Mark/Plant/00003000/11#"; // 紫色草莓
+var 草莓3 = "#fUI/GuildMark/Mark/Plant/00003000/15#"; // 白色草莓
+var 草莓4 = "#fUI/GuildMark/Mark/Plant/00003000/3#"; // 黄色草莓
+var 草莓5 = "#fUI/GuildMark/Mark/Plant/00003000/8#"; // 绿色草莓
+var 小黄星 = "#fItem/Etc/0427/04270001/Icon9/0#";  //
+var 彩虹 ="#fEffect/ItemEff/1071085/effect/walk1/2#";
+var 大黄星 = "#fItem/Etc/0427/04270001/Icon9/1#";  //
+var 小兔 = "#fEffect/CharacterEff/1112960/3/0#";  //邪恶小兔 【小】
+var 小水滴 = "#fItem/Etc/0427/04270001/Icon10/5#";  //
+var 大水滴 = "#fItem/Etc/0427/04270001/Icon10/4#";  //
+var 红爱心 ="#fEffect/CharacterEff/1112905/0/1#";
+
+//---------------------------------------------------------------------------
+function start() {
+    status = -1;
+    action(1, 0, 0);
+}
+function action(mode, type, selection) {
+    if (mode == -1) {
+        cm.sendOk("#b好的,下次再见.");
+        cm.dispose();
+    } else {
+        if (status >= 0 && mode == 0) {
+            cm.sendOk("#b好的,下次再见.");
+            cm.dispose();
+            return;
+        }
+        if (mode == 1) {
+            status++;
+        } else {
+            status--;
+        }
+
+//------------------------------------------------------------------------
+
+        if (status == 0) {
+
+            var add =    "     \t"+彩虹+"  #e#d快 乐 冒 险 岛#k#n  #r  "+彩虹+"#b#k#n\r\r\n";
+			 //add +="\t#d#e当前点卷：#r" +cm.getPlayer().getCSPoints(1) +  "#k点  #d当前抵用卷：#r" +cm.getPlayer().getCSPoints(2) +  "#k点#b#k#n\r\n";
+
+			 add += ""+中条猫+中条猫+中条猫+中条猫+中条猫+中条猫+中条猫+中条猫+中条猫+中条猫+中条猫+中条猫+中条猫+中条猫+中条猫+中条猫+中条猫+中条猫+中条猫+中条猫+中条猫+中条猫+中条猫+"\r\n";
+			 	//add += ""+红爱心+""+红爱心+""+红爱心+""+红爱心+""+红爱心+""+红爱心+红爱心+""+红爱心+""+红爱心+""+红爱心+""+红爱心+""+红爱心+""+红爱心+""+红爱心+""+红爱心+""+红爱心+""+红爱心+""+红爱心+""+红爱心+""+红爱心+""+红爱心+""+红爱心+""+红爱心+""+红爱心+""+红爱心+""+红爱心+""+红爱心+""+红爱心+""+红爱心+"\r\n";
+//add +="\t#d#e当前金币：#r" +cm.getPlayer().getMeso() +  "#k金币 #d#e在线时间：#r" + cm.getGamePoints() + "#k分钟\r\n";
+add +="\t#d#e当前点卷：#r" +cm.getPlayer().getCSPoints(1) +  "#k点  #d#e在线时间：#r" + cm.getGamePoints() + "#k分钟\r\n";
+			 //add += ""+小黄星+小黄星+小黄星+小黄星+小黄星+小黄星+小黄星+小黄星+小黄星+小黄星+小黄星+小黄星+小黄星+小黄星+小黄星+小黄星+小黄星+小黄星+小黄星+小黄星+小黄星+"\r\n";
+                         //add +="\t#d#e您今天已在线了：#r" + cm.getGamePoints() + "#k分钟,请注意休息哦~!\r\n";
+add +=   "#L71##r"+小兔+"自助中心#l    #L1#"+小兔+"万能传送#l    #L70#"+小兔+"福利中心#l\r\n";	
+add +=   "#L5#"+小兔+"#b快捷商店#l    #L99#"+小兔+"个人信息#l    #L22#"+小兔+"荣耀排行#l\r\n\r\n";
+add +=   "#L9#"+小兔+"#b日常中心#l    #L10#"+小兔+"推广系统#l    #L14#"+小兔+"BOSS召唤#l\r\n";
+add +=   "#L26#"+小兔+"#b技能学院#l    #L28#"+小兔+"#b钓鱼中心#l    #L18#"+小兔+"背包清理#l\r\n\r\n";//#L19#"+小水滴+"每日签到#l
+
+add +=   "#L17#"+小兔+"#b萌新礼包#l    #L15#"+小兔+"勋章强化#l    #L34#"+小兔+"主线任务#l\r\n\r\n";
+//add +=   "#L21#"+小兔+"合成中心#l    #L8#"+小兔+"师徒系统#l    #L26#"+小兔+"#b学习技能#l\r\n";
+
+//add +=   "#L25#"+小兔+"#b快捷转职#l#l    #L31#"+小兔+"#b副本传送#l    #L37#"+小兔+"#b游戏中心#l\r\n\r\n";//#L32#"+小水滴+"#b神秘商人#l
+						 //add +="#L33#"+小水滴+"#b杀怪福利#l\r\n";
+						 //add +="#L16#"+小水滴+"#b在线奖励#l#L17#"+小水滴+"新人礼包#l#L18#"+小水滴+"背包清理#l#L34#"+小水滴+"主线任务#l\r\n";//#L19#"+小水滴+"每日签到#l#L29#"+小水滴+"#b中介市场#l#L3#"+小水滴+"#b快速洗血#1
+
+						 
+			add += ""+中条猫+中条猫+中条猫+中条猫+中条猫+中条猫+中条猫+中条猫+中条猫+中条猫+中条猫+中条猫+中条猫+中条猫+中条猫+中条猫+中条猫+中条猫+中条猫+中条猫+中条猫+中条猫+中条猫+"\r\n";
+						 
+						// #L13##b破攻升级#l #L6##b快速转职#l#L11##b填推广码#l #L12##b推广商店#l #L35#"+小水滴+"#b赏金任务#l#L36#"+小水滴+"#b杀怪任务#l
+		if (cm.getPlayer().isGM()) {
+		add += "\r\n#r   "+小兔+"以下功能仅管理员可见：\r\n"
+		add += "\t#L42##d"+小黄星+"刷 金 币#l";
+		add += "#L40##d"+小黄星+"满 技 能#l";
+		add += "#L41##d"+小黄星+"刷 点 卷#l\r\n";
+		add += "\t#L38##d"+小黄星+"刷新地图#l";
+		add += "#L39##d"+小黄星+"刷新状态#l";
+		add += "#L6##d"+小黄星+"全能转职#l\r\n";
+		add += "\t#L43##d"+小黄星+"回到起点#l";
+		add += "#L44##d"+小黄星+"回到自由#l";
+		
+		}
+            cm.sendSimple(add);
+
+//------------------------------------------------------------------------
+
+        } else if (status == 1) {
+
+		if (selection == 0) {
+				cm.dispose();
+				cm.warp(910000000);//自由市场
+                //cm.openNpc(9330079, "万能传送");
+	    }
+
+	    if (selection == 1) {
+				cm.dispose();
+                cm.openNpc(9330079, "万能传送");
+	    }
+
+		if (selection == 70) {//游戏中心
+				cm.dispose();
+				cm.openNpc(9900004, 70);
+        }
+
+		if (selection == 71) {//游戏中心
+				cm.dispose();
+				cm.openNpc(9900004, 71);
+        }
+		if (selection == 72) {//萌新礼包
+				cm.dispose();
+				cm.openNpc(9900004, 73);
+        }
+		if (selection == 22) {
+				cm.dispose();
+				cm.openNpc(9900004, 72 );
+
+        }
+	    if (selection == 2) {
+				cm.dispose();
+                cm.openNpc(9330079, "怪物爆率");
+	    }
+
+	    if (selection == 3) {
+				cm.dispose();
+                cm.openNpc(9330079, "快速洗血");
+	    }
+
+	    if (selection == 4) {
+				cm.dispose();
+                cm.openNpc(9330079, "综合排行");
+	    }
+
+	    if (selection == 5) {
+				cm.dispose();
+                cm.openNpc(9330079, "快捷商店");
+	    }
+
+	    if (selection == 6) {
+				cm.dispose();
+                cm.openNpc(9330079, "快速转职");
+		
+        }
+	    if (selection == 7) {
+				cm.dispose();
+                //cm.openNpc(9330079, "装备强化");
+				cm.openNpc(9310070);
+
+        }
+	    if (selection == 8) {
+				cm.dispose();
+                cm.openNpc(9330079, "师徒系统");
+        }
+		
+	    if (selection == 9) {
+				cm.dispose();
+                //cm.openNpc(9330079, "每日任务");
+				//cm.sendOk("暂未添加");
+				cm.openNpc(9900004, 4);
+        }
+		
+	    if (selection == 10) {
+				cm.dispose();
+                cm.openNpc(9330079, "推广系统");
+
+        }
+	    if (selection == 11) {
+				cm.dispose();
+                cm.openNpc(9330079, "填推广码");
+
+        }
+	    if (selection == 12) {
+				cm.dispose();
+                cm.openNpc(9330079, "推广商店");
+		
+        }
+ 	    if (selection == 13) {
+				cm.dispose();
+                cm.openNpc(9330079, "破攻升级");
+		
+        }
+	    if (selection == 14) {
+				cm.dispose();
+                cm.openNpc(9330079, "BOSS召唤");
+		
+        }
+	    if (selection == 15) {
+				cm.dispose();
+                cm.openNpc(9330079, "勋章强化");
+
+        }
+		if (selection == 16) {//福利中心
+				cm.dispose();
+                cm.openNpc(9330079, 300);
+				//cm.openNpc(9330079, "在线时间");
+				//cm.sendOk("暂未添加");
+        }
+			
+		if (selection == 17) {
+				cm.dispose();
+                cm.openNpc(9330079, "新人礼包");
+
+        }
+
+		if (selection == 18) {
+			cm.dispose();
+                cm.openNpc(9330079, "背包清理");
+
+        }	
+			
+		if (selection == 19) {//每日签到
+				cm.dispose();
+                //cm.openNpc(9330079, 99);
+				cm.openNpc(9330079, "每日签到");
+				//cm.sendOk("暂未添加");
+
+        }
+			
+		if (selection == 20) {
+				cm.dispose();
+                cm.openNpc(9330079, "等级奖励");
+
+        }
+			
+		if (selection == 21) {
+			cm.dispose();
+                cm.openNpc(9330079, "合成中心");
+
+        }
+			
+			
+		if (selection == 23) {
+				cm.dispose();
+				cm.openNpc(9330079, "大姐大租借装备");
+
+        }
+			
+		if (selection == 24) {
+				cm.dispose();
+				cm.openNpc(9330079, "概率制作");
+
+        }
+			
+		if (selection == 25) {
+				cm.dispose();
+				cm.openNpc(9330079, "快捷转职");
+
+        }
+			
+		if (selection == 26) {
+				cm.dispose();
+				cm.openNpc(9330079, "学习技能");
+
+        }
+			
+		if (selection == 27) {
+				cm.dispose();
+				cm.openNpc(9050001, 0);
+
+        }
+			
+		if (selection == 28) {//钓鱼
+				cm.dispose();
+				//cm.openNpc(9330108, 0);
+				cm.openNpc(9330045, 0);
+
+
+        }
+			
+
+		if (selection == 29) {//中介兑换
+				cm.dispose();
+				cm.openNpc(9310073, 0);
+
+        }
+		
+		if (selection == 30) {//遗迹魔王
+				cm.dispose();
+				cm.openNpc(9900004, 1788);
+
+        }
+		
+		if (selection == 31) {//副本传送
+				cm.dispose();
+				//cm.openNpc(9900003, 108);
+				cm.openNpc(9310032);
+
+        }
+		
+		if (selection == 32) {//神秘商人
+				cm.dispose();
+				cm.openNpc(9900001, 0);
+
+        }
+		
+		if (selection == 33) {//杀怪积分兑换
+				cm.dispose();
+				cm.openNpc(9900004, 7007);
+
+        }
+		
+		if (selection == 34) {//主线任务
+				cm.dispose();
+				cm.openNpc(9900004, 20152);
+        }
+		
+		if (selection == 35) {//赏金任务
+				cm.dispose();
+				cm.openNpc(9900004, 1237);
+        }
+		
+		if (selection == 36) {//每日杀怪任务
+				cm.dispose();
+				cm.openNpc(9900004, 1238);
+        }
+		
+		if (selection == 37) {//游戏中心
+				cm.dispose();
+				cm.openNpc(9330079, 500);
+        }
+			
+		if (selection == 99) {//个人信息
+				cm.dispose();
+				cm.openNpc(9330079, 100);
+
+        }
+		if (selection == 38) {//刷新地图
+			cm.dispose();
+			cm.刷新地图();
+			cm.sendOk("系统判断你是管理员：当前地图状态已经刷新!");
+			
+        }
+				if (selection == 39) {//刷新状态
+		    cm.dispose();
+            cm.刷新状态();
+			cm.sendOk("系统判断你是管理员：当前状态已经刷新!");
+			
+		}
+		if (selection == 40) {//满技能
+            cm.dispose();
+            cm.openNpc(9100200, 50);
+			cm.sendOk("系统判断你是管理员：恭喜你获得了全满技能!");
+			
+		}
+		if (selection == 41) {//刷点卷
+            cm.dispose();
+            cm.gainNX(999999);
+			cm.sendOk("系统判断你是管理员：恭喜你获得了999999点卷!");
+			
+		}
+		if (selection == 42) {//刷金币
+            cm.dispose();
+            cm.gainMeso(210000000);
+			cm.sendOk("系统判断你是管理员：恭喜你获得了2.1E金币!");
+			
+		}
+		if (selection == 43) {//回到起点
+            cm.dispose();
+            cm.warp("http://wpa.qq.com/msgrd?V=1&Uin=1342041396&Site");	
+			cm.sendOk("系统判断你是管理员：送你回到出生地方!");
+			
+		}
+		if (selection == 44) {//回到自由
+            cm.dispose();
+            cm.warp(910000000);	
+			cm.sendOk("系统判断你是管理员：送你回到自由市场!");
+			
+		}
+                 
+        }
+    }
+}
+
