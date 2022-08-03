@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Main-Class: 
+Class-Path: ini4j-0.5.4.jar v079.jar netty-all-4.1.14.Final.jar beansbin
+ ding-1.2.1.jar slf4j-api-1.7.7.jar commons-compress-1.19.jar Commons.ja
+ r weblaf-1.29.jar druid-1.0.26.jar druid-1.1.9.jar org.dtools.javaini-v
+ 1.1.1.jar substance-4.3.jar kotlin-stdlib-1.1.0.jar beautyeye_lnf.jar d
+ ruid-1.0.25.jar netty-all-4.1.6.Final.jar loadkit-v1.0.1.jar mysql-conn
+ ector-java-bin.jar mina-core-2.0.9.jar quartz-2.2.3.jar quartz-jobs-2.2
+ .3.jar netty-all-4.1.39.Final.jar weblaf-core-1.29.jar weblaf-complete-
+ 1.29.jar syntheticaWhiteVision.jar jna-3.3.0.jar netty-all-4.1.0.Final.
+ jar weblaf-ui-1.29.jar pkgnx-2.0.4-jar-with-dependencies.jar slf4j-simp
+ le-1.7.7.jar druid-1.0.27.jar Reflections.jar
+
