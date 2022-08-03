@@ -92,15 +92,9 @@ public class DatabaseConnection {
               //  throw new DatabaseException(ex);
             }
             dbDriver = "com.mysql.jdbc.Driver";
-            dbUrl = "jdbc:mysql://" + "127.0.0.1" + ":" +  "3306" + "/" +  "v079" + "?useUnicode=true&characterEncoding=UTF8";
-            dbUser = dbProps.getProperty("QhMs.db.user");
-            dbPass = dbProps.getProperty("QhMs.db.password");
-            try {
-                connectionTimeOut = Long.parseLong(dbProps.getProperty("timeout"));
-            } catch (Exception e) {
-                //System.out.println("[DB信息] Cannot read Timeout Information, using default: " + connectionTimeOut + " ");
-                System.out.println("○ 【正在加载】 -> 数据库最大连接数 " + connectionTimeOut + " ");
-            }
+            dbUrl = "jdbc:mysql://" + dbProps.getProperty("QILIN.db.ip")  + ":" +  dbProps.getProperty("QILIN.db.port") + "/" +   dbProps.getProperty("QILIN.db.name")+ "?useUnicode=true&characterEncoding=UTF8";
+            dbUser = dbProps.getProperty("QILIN.db.user");
+            dbPass = dbProps.getProperty("QILIN.db.password");
         }
         try {
             Class.forName(dbDriver); // touch the MySQL driver
@@ -115,6 +109,7 @@ public class DatabaseConnection {
                     //System.out.println("[DB信息] Failed to read Wait_Timeout, using " + connectionTimeOut + " instead.");
                 } else {
                     connectionTimeOut = timeout;
+                    System.out.println("○ 【正在加载】 -> 数据库最大逾时 " + connectionTimeOut + " ");
       //              System.out.println("[DB信息] Database Timeout is: " + connectionTimeOut + " milliseconds.");
                 }
                 propsInited = true;
