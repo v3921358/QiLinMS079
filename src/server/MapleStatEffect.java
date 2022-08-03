@@ -1125,7 +1125,7 @@ public class MapleStatEffect implements Serializable {
         switch (sourceid) {
             case 2022221: // Speed Infusion
             case 2022222: {
-                Selfstat = new ArrayList();
+                Selfstat = new ArrayList<>();
                 Selfstat.add((new Pair<>(MapleBuffStat.MAXHP, mhp_temp)));
                 Selfstat.add((new Pair<>(MapleBuffStat.MAXMP, mmp_temp)));
                 break;
