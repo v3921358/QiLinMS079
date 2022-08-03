@@ -1,6 +1,7 @@
 package client.messages;
 
 import java.util.ArrayList;
+
 import client.MapleCharacter;
 import client.MapleClient;
 import client.messages.commands.*;
@@ -11,14 +12,18 @@ import constants.ServerConstants;
 import constants.ServerConstants.PlayerGMRank.游戏管理;
 import constants.ServerConstants.PlayerGMRank.玩家指令;
 import database.DatabaseConnection;
+
 import java.lang.reflect.Modifier;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Collections;
 import java.util.HashMap;
+
 import tools.FileoutputUtil;
+
 import static tools.FileoutputUtil.CurrentReadable_Time;
+
 import tools.MaplePacketCreator;
 
 public class CommandProcessor {
@@ -31,7 +36,7 @@ public class CommandProcessor {
             return;
         }
         switch (type) {
-           case 玩家指令:
+            case NORMAL:
                 c.getPlayer().dropMessage(6, msg);
                 break;
             case TRADE:
@@ -62,15 +67,14 @@ public class CommandProcessor {
             }
             return true;
         }
-        int 游戏指令开关;
-        游戏指令开关 = gui./*Start*/.ConfigValuesMap.get("游戏指令开关");
+        int 游戏指令开关 = gui.Qhms.ConfigValuesMap.get("游戏指令开关");
         if (游戏指令开关 <= 0) {
             if (c.getPlayer().getGMLevel() > ServerConstants.PlayerGMRank.玩家指令.getLevel()) {
                 // if (line.charAt(0) == ServerConstants.PlayerGMRank.GM.getCommandPrefix() || line.chaBrAt(0) == ServerConstants.PlayerGMRank.ADMIN.getCommandPrefix() || line.charAt(0) == ServerConstants.PlayerGMRank.INTERN.getCommandPrefix()) { //Redundant for now, but in case we change symbols later. This will become extensible.
                 if ((line.charAt(0) == ServerConstants.PlayerGMRank.巡查管理.getCommandPrefix() || line.charAt(0) == ServerConstants.PlayerGMRank.游戏管理.getCommandPrefix())
                         || line.charAt(0) == ServerConstants.PlayerGMRank.巡查管理.getCommandPrefix()) {
                     //Redundant for now, but in case we change symbols later. This will become extensible.
-                    
+
                     String[] splitted = line.split(" ");
                     splitted[0] = splitted[0].toLowerCase();
 
@@ -80,23 +84,23 @@ public class CommandProcessor {
 //                            dropHelp(c, 0);
 //                            return true;
 //                        } else
-if (co == null || co.getType() != type) {
-    sendDisplayMessage(c, "指令不存在或者指令格式不正确，输入[*指令大全]进行查看。", type);
-    return true;
-}
-if (c.getPlayer().getGMLevel() >= co.getReqGMLevel()) {
-                            boolean ret;
-                            ret = co.execute(c, splitted);
-    if (ret > 0 && c.getPlayer() != null) { //incase d/c after command or something
-        logGMCommandToDB(c.getPlayer(), line);
-        System.out.println("[有指令]" + CurrentReadable_Time() + " : [ " + c.getPlayer().getName() + " ] 使用了 : " + line);
-    }
-} else {
-    sendDisplayMessage(c, "你的权限不足够使用.", type);
-}
-return true;
+                        if (co == null || co.getType() != type) {
+                            sendDisplayMessage(c, "指令不存在或者指令格式不正确，输入[*指令大全]进行查看。", type);
+                            return true;
+                        }
+                        if (c.getPlayer().getGMLevel() >= co.getReqGMLevel()) {
+                            boolean ret = co.execute(c, splitted);
+                            if (ret && c.getPlayer() != null) { //incase d/c after command or something
+                                logGMCommandToDB(c.getPlayer(), line);
+                                System.out.println("[有指令]" + CurrentReadable_Time() + " : [ " + c.getPlayer().getName() + " ] 使用了 : " + line);
+                            }
+                        } else {
+                            sendDisplayMessage(c, "你的权限不足够使用.", type);
+                        }
+                        return true;
                     }
-                } else {                }
+                } else {
+                }
             }
         } else {
             sendDisplayMessage(c, "后台已经关闭游戏指令.", type);
@@ -124,8 +128,8 @@ return true;
             try {
                 ps.close();
             } catch (SQLException e) {/*
-                 * Err.. Fuck?
-                 */
+             * Err.. Fuck?
+             */
 
             }
         }
@@ -134,11 +138,11 @@ return true;
     static {
 
         Class[] CommandFiles = {
-            //PlayerCommand.class, GMCommand.class, InternCommand.class, AdminCommand.class
-            玩家指令.class,
-            巡查管理.class,
-            活动管理.class,
-            游戏管理.class
+                //PlayerCommand.class, GMCommand.class, InternCommand.class, AdminCommand.class
+                玩家指令.class,
+                巡查管理.class,
+                活动管理.class,
+                游戏管理.class
         };
 
         for (Class clasz : CommandFiles) {
