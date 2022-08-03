@@ -251,7 +251,7 @@ public class MapleServerHandler extends ChannelInboundHandlerAdapter {
                     }
                 } finally {
                     ctx.channel().close();
-                    ctx.channel().attr(MapleClient.CLIENT_KEY).remove();
+                    ctx.channel().attr(MapleClient.CLIENT_KEY).set(null);
                     //ctx.channel().attr(MaplePacketDecoder.DECODER_STATE_KEY).remove();
                 }
             }

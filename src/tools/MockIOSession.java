@@ -140,10 +140,6 @@ public class MockIOSession implements Channel {
         return null;
     }
 
-    public RecvByteBufAllocator.Handle recvBufAllocHandle() {
-        return null;
-    }
-
     public ChannelFuture register(EventLoop el, ChannelPromise cp) {
         return null;
     }
