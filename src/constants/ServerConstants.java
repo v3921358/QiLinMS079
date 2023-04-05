@@ -200,13 +200,13 @@ public class ServerConstants {
     }
 
     public static void loadSetting() {
-        String[] x = ServerProperties.getProperty("QhMs.cashshop.HotSell", "10000007, 10000008, 10000009, 10000010, 10000011").split(",");
+        String[] x = ServerProperties.getProperty("qilin.cashshop.HotSell", "10000007, 10000008, 10000009, 10000010, 10000011").split(",");
         int[] y = new int[x.length];
         for (int i = 0; i < x.length; i++) {
             y[i] = Integer.parseInt(x[i].replace(" ", ""));
         }
         hot_sell = y;
-        TESPIA = ServerProperties.getProperty("QhMs.tespia", TESPIA);
+        TESPIA = ServerProperties.getProperty("qilin.tespia", TESPIA);
         Use_Fixed_IV = ServerProperties.getProperty("server.crypt", Use_Fixed_IV);
     }
 

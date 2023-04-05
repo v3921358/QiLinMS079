@@ -31,7 +31,7 @@ public class 活动神秘商人 {
      */
     public static void 随机商人出现条件() {
         //随机频道
-        int pind = (int) Math.ceil(Math.random() * Integer.parseInt(ServerProperties.getProperty("QhMs.channel.count")));
+        int pind = (int) Math.ceil(Math.random() * Integer.parseInt(ServerProperties.getProperty("qilin.channel.count")));
         //如果随机的频道为0，则加1
         if (pind == 0) {
             pind += 1;

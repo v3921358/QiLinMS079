@@ -148,15 +148,15 @@ public class ServerConfig {
     }
 
     public static void loadSetting() {
-        LOG_MRECHANT = ServerProperties.getProperty("QhMs.merchantLog", LOG_MRECHANT);
-        LOG_MEGA = ServerProperties.getProperty("QhMs.megaLog", LOG_MEGA);
-        LOG_CSBUY = ServerProperties.getProperty("QhMs.csLog", LOG_CSBUY);
-        LOG_DAMAGE = ServerProperties.getProperty("QhMs.damLog", LOG_DAMAGE);
-        LOG_CHAT = ServerProperties.getProperty("QhMs.chatLog", LOG_CHAT);
-        LOG_PACKETS = ServerProperties.getProperty("QhMs.packetLog", LOG_PACKETS);
-        AUTO_REGISTER = ServerProperties.getProperty("QhMs.autoRegister", AUTO_REGISTER);
-        SERVERNAME = ServerProperties.getProperty("QhMs.serverName", SERVERNAME);
-        DEBUG_MODE = ServerProperties.getProperty("QhMs.debug", DEBUG_MODE);
+        LOG_MRECHANT = ServerProperties.getProperty("qilin.merchantLog", LOG_MRECHANT);
+        LOG_MEGA = ServerProperties.getProperty("qilin.megaLog", LOG_MEGA);
+        LOG_CSBUY = ServerProperties.getProperty("qilin.csLog", LOG_CSBUY);
+        LOG_DAMAGE = ServerProperties.getProperty("qilin.damLog", LOG_DAMAGE);
+        LOG_CHAT = ServerProperties.getProperty("qilin.chatLog", LOG_CHAT);
+        LOG_PACKETS = ServerProperties.getProperty("qilin.packetLog", LOG_PACKETS);
+        AUTO_REGISTER = ServerProperties.getProperty("qilin.autoRegister", AUTO_REGISTER);
+        SERVERNAME = ServerProperties.getProperty("qilin.serverName", SERVERNAME);
+        DEBUG_MODE = ServerProperties.getProperty("qilin.debug", DEBUG_MODE);
     }
 
     static {

@@ -174,22 +174,22 @@ public class Start {
         
          System.out.println("\r\n○ 【正在加载】 -> 游戏倍率信息");
         //显示经验倍率，不能超过100倍
-        if (Integer.parseInt(ServerProperties.getProperty("QhMs.expRate")) > 100) {
+        if (Integer.parseInt(ServerProperties.getProperty("qilin.expRate")) > 100) {
             System.out.println("○ 游戏经验倍率: 100 倍 (上限)");
         } else {
-            System.out.println("○  游戏经验倍率: " + Integer.parseInt(ServerProperties.getProperty("QhMs.expRate")) + " 倍 ");
+            System.out.println("○  游戏经验倍率: " + Integer.parseInt(ServerProperties.getProperty("qilin.expRate")) + " 倍 ");
         }
         //显示物品倍率，不能超过100倍
-        if (Integer.parseInt(ServerProperties.getProperty("QhMs.dropRate")) > 100) {
+        if (Integer.parseInt(ServerProperties.getProperty("qilin.dropRate")) > 100) {
             System.out.println("○ 游戏物品倍率：100 倍 (上限)");
         } else {
-            System.out.println("○  游戏物品倍率：" + Integer.parseInt(ServerProperties.getProperty("QhMs.dropRate")) + " 倍 ");
+            System.out.println("○  游戏物品倍率：" + Integer.parseInt(ServerProperties.getProperty("qilin.dropRate")) + " 倍 ");
         }
         //显示金币倍率，不能超过100倍
-        if (Integer.parseInt(ServerProperties.getProperty("QhMs.mesoRate")) > 100) {
+        if (Integer.parseInt(ServerProperties.getProperty("qilin.mesoRate")) > 100) {
             System.out.println("○ 游戏金币倍率：100 倍 (上限)");
         } else {
-            System.out.println("○  游戏金币倍率：" + Integer.parseInt(ServerProperties.getProperty("QhMs.mesoRate")) + " 倍 ");
+            System.out.println("○  游戏金币倍率：" + Integer.parseInt(ServerProperties.getProperty("qilin.mesoRate")) + " 倍 ");
         }
         
         System.out.println("\r\n○ 【开始加载】 -> 游戏端口配置");

@@ -116,8 +116,8 @@ public class ChannelServer implements Serializable {
     public final void setup() {
         setChannel(channel); //instances.put
         try {
-            eventSM = new EventScriptManager(this, ServerProperties.getProperty("QhMs.events").split(","));
-            port = (short) ((ServerProperties.getProperty("QhMs.channel.port", DEFAULT_PORT) + channel) - 1);
+            eventSM = new EventScriptManager(this, ServerProperties.getProperty("qilin.events").split(","));
+            port = (short) ((ServerProperties.getProperty("qilin.channel.port", DEFAULT_PORT) + channel) - 1);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -297,7 +297,7 @@ public class ChannelServer implements Serializable {
 
     public final void reloadEvents() {
         eventSM.cancel();
-        eventSM = new EventScriptManager(this, ServerProperties.getProperty("QhMs.events").split(","));
+        eventSM = new EventScriptManager(this, ServerProperties.getProperty("qilin.events").split(","));
         eventSM.init();
     }
 

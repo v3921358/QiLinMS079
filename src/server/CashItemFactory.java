@@ -39,7 +39,6 @@ public class CashItemFactory {
     private final Map<Integer, Integer> itemIdToSN = new HashMap<>();
     private final Map<Integer, Integer> itemIdToSn = new HashMap<>();
     private final MapleDataProvider data = MapleDataProviderFactory.getDataProvider("Etc.wz");
-    private final MapleDataProvider itemStringInfo = MapleDataProviderFactory.getDataProvider(new File(System.getProperty("net.sf.odinms.wzpath") + "/String.wz"));
     private Map<Integer, Integer> idLookup = new HashMap();
 
     public static final CashItemFactory getInstance() {

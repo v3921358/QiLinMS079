@@ -58,7 +58,7 @@ public class LoginServer {
     }
 
     public static final void setup() {
-        port = Short.parseShort(ServerProperties.getProperty("QhMs.login.port"));
+        port = Short.parseShort(ServerProperties.getProperty("qilin.login.port"));
         acceptor = new ServerConnection(port, 0, MapleServerHandler.LOGIN_SERVER);
         acceptor.run();
         //System.out.println("\n【登入伺服器】  - 監聽端口: " + Short.toString(port) + " \n");

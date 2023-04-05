@@ -109,19 +109,19 @@ public class WorldConstants {
     }
 
     public static void loadSetting() {
-        ADMIN_ONLY = ServerProperties.getProperty("QhMs.admin", ADMIN_ONLY);
-        FLAG = ServerProperties.getProperty("QhMs.flag", FLAG);
-        EXP_RATE = ServerProperties.getProperty("QhMs.expRate", EXP_RATE);
-        MESO_RATE = ServerProperties.getProperty("QhMs.mesoRate", MESO_RATE);
-        DROP_RATE = ServerProperties.getProperty("QhMs.dropRat", DROP_RATE);
-        WORLD_TIP = ServerProperties.getProperty("QhMs.eventMessage", WORLD_TIP);
-        SCROLL_MESSAGE = ServerProperties.getProperty("QhMs.serverMessage", SCROLL_MESSAGE);
-        CHANNEL_COUNT = ServerProperties.getProperty("QhMs.channel.count", CHANNEL_COUNT);
-        //USER_LIMIT = ServerProperties.getProperty("QhMs.userlimit", USER_LIMIT);//服务端最大人数
+        ADMIN_ONLY = ServerProperties.getProperty("qilin.admin", ADMIN_ONLY);
+        FLAG = ServerProperties.getProperty("qilin.flag", FLAG);
+        EXP_RATE = ServerProperties.getProperty("qilin.expRate", EXP_RATE);
+        MESO_RATE = ServerProperties.getProperty("qilin.mesoRate", MESO_RATE);
+        DROP_RATE = ServerProperties.getProperty("qilin.dropRat", DROP_RATE);
+        WORLD_TIP = ServerProperties.getProperty("qilin.eventMessage", WORLD_TIP);
+        SCROLL_MESSAGE = ServerProperties.getProperty("qilin.serverMessage", SCROLL_MESSAGE);
+        CHANNEL_COUNT = ServerProperties.getProperty("qilin.channel.count", CHANNEL_COUNT);
+        //USER_LIMIT = ServerProperties.getProperty("qilin.userlimit", USER_LIMIT);//服务端最大人数
         USER_LIMIT = gui.Qhms.ConfigValuesMap.get("服务端最大人数");
-        MAX_CHAR_VIEW = ServerProperties.getProperty("QhMs.maxCharView", MAX_CHAR_VIEW);//频道容纳人数
-        GMITEMS = ServerProperties.getProperty("QhMs.gmitems", GMITEMS);
-        CS_ENABLE = ServerProperties.getProperty("QhMs.cashshop.enable", CS_ENABLE);
+        MAX_CHAR_VIEW = ServerProperties.getProperty("qilin.maxCharView", MAX_CHAR_VIEW);//频道容纳人数
+        GMITEMS = ServerProperties.getProperty("qilin.gmitems", GMITEMS);
+        CS_ENABLE = ServerProperties.getProperty("qilin.cashshop.enable", CS_ENABLE);
     }
 
     static {

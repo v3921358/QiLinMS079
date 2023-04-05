@@ -19,8 +19,8 @@ import server.maps.MapleMapObjectType;
 
 public class GameConstants {
     
-    public static String 冒险岛名字 = ServerProperties.getProperty("QhMs.serverName");//游戏名字读取配置文件
-    //public static String 绑定IP = ServerProperties.getProperty("QhMs.ServerIp");//IP地址
+    public static String 冒险岛名字 = ServerProperties.getProperty("qilin.serverName");//游戏名字读取配置文件
+    //public static String 绑定IP = ServerProperties.getProperty("qilin.ServerIp");//IP地址
 
 
     public static boolean isLinkedAttackSkill(final int id) {

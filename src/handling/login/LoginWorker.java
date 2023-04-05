@@ -97,64 +97,64 @@ public class LoginWorker {
                 LoginServer.getClientStorage().registerAccount(c);
                 c.sendPacket(LoginPacket.getAuthSuccessRequest(c));
                 if (gui.Qhms.ConfigValuesMap.get("蓝蜗牛开关") == 0) {
-                    c.sendPacket(LoginPacket.getServerList(0, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("QhMs.flag"))));
+                    c.sendPacket(LoginPacket.getServerList(0, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("qilin.flag"))));
                 }
                 if (gui.Qhms.ConfigValuesMap.get("蘑菇仔开关") == 0) {
-                    c.sendPacket(LoginPacket.getServerList(1, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("QhMs.flag"))));
+                    c.sendPacket(LoginPacket.getServerList(1, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("qilin.flag"))));
                 }
                 if (gui.Qhms.ConfigValuesMap.get("绿水灵开关") == 0) {
-                    c.sendPacket(LoginPacket.getServerList(2, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("QhMs.flag"))));
+                    c.sendPacket(LoginPacket.getServerList(2, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("qilin.flag"))));
                 }
                 if (gui.Qhms.ConfigValuesMap.get("漂漂猪开关") == 0) {
-                    c.sendPacket(LoginPacket.getServerList(3, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("QhMs.flag"))));
+                    c.sendPacket(LoginPacket.getServerList(3, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("qilin.flag"))));
                 }
                 if (gui.Qhms.ConfigValuesMap.get("小青蛇开关") == 0) {
-                    c.sendPacket(LoginPacket.getServerList(4, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("QhMs.flag"))));
+                    c.sendPacket(LoginPacket.getServerList(4, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("qilin.flag"))));
                 }
                 if (gui.Qhms.ConfigValuesMap.get("红螃蟹开关") == 0) {
-                    c.sendPacket(LoginPacket.getServerList(5, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("QhMs.flag"))));
+                    c.sendPacket(LoginPacket.getServerList(5, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("qilin.flag"))));
                 }
                 if (gui.Qhms.ConfigValuesMap.get("大海龟开关") == 0) {
-                    c.sendPacket(LoginPacket.getServerList(6, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("QhMs.flag"))));
+                    c.sendPacket(LoginPacket.getServerList(6, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("qilin.flag"))));
                 }
                 if (gui.Qhms.ConfigValuesMap.get("章鱼怪开关") == 0) {
-                    c.sendPacket(LoginPacket.getServerList(7, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("QhMs.flag"))));
+                    c.sendPacket(LoginPacket.getServerList(7, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("qilin.flag"))));
                 }
                 if (gui.Qhms.ConfigValuesMap.get("顽皮猴开关") == 0) {
-                    c.sendPacket(LoginPacket.getServerList(8, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("QhMs.flag"))));
+                    c.sendPacket(LoginPacket.getServerList(8, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("qilin.flag"))));
                 }
                 if (gui.Qhms.ConfigValuesMap.get("星精灵开关") == 0) {
-                    c.sendPacket(LoginPacket.getServerList(9, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("QhMs.flag"))));
+                    c.sendPacket(LoginPacket.getServerList(9, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("qilin.flag"))));
                 }
                 if (gui.Qhms.ConfigValuesMap.get("胖企鹅开关") == 0) {
-                    c.sendPacket(LoginPacket.getServerList(10, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("QhMs.flag"))));
+                    c.sendPacket(LoginPacket.getServerList(10, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("qilin.flag"))));
                 }
                 if (gui.Qhms.ConfigValuesMap.get("白雪人开关") == 0) {
-                    c.sendPacket(LoginPacket.getServerList(11, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("QhMs.flag"))));
+                    c.sendPacket(LoginPacket.getServerList(11, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("qilin.flag"))));
                 }
                 if (gui.Qhms.ConfigValuesMap.get("石头人开关") == 0) {
-                    c.sendPacket(LoginPacket.getServerList(12, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("QhMs.flag"))));
+                    c.sendPacket(LoginPacket.getServerList(12, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("qilin.flag"))));
                 }
                 if (gui.Qhms.ConfigValuesMap.get("紫色猫开关") == 0) {
-                    c.sendPacket(LoginPacket.getServerList(13, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("QhMs.flag"))));
+                    c.sendPacket(LoginPacket.getServerList(13, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("qilin.flag"))));
                 }
                 if (gui.Qhms.ConfigValuesMap.get("大灰狼开关") == 0) {
-                    c.sendPacket(LoginPacket.getServerList(14, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("QhMs.flag"))));
+                    c.sendPacket(LoginPacket.getServerList(14, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("qilin.flag"))));
                 }
                 if (gui.Qhms.ConfigValuesMap.get("小白兔开关") == 0) {
-                    c.sendPacket(LoginPacket.getServerList(15, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("QhMs.flag"))));
+                    c.sendPacket(LoginPacket.getServerList(15, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("qilin.flag"))));
                 }
                 if (gui.Qhms.ConfigValuesMap.get("喷火龙开关") == 0) {
-                    c.sendPacket(LoginPacket.getServerList(16, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("QhMs.flag"))));
+                    c.sendPacket(LoginPacket.getServerList(16, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("qilin.flag"))));
                 }
                 if (gui.Qhms.ConfigValuesMap.get("火野猪开关") == 0) {
-                    c.sendPacket(LoginPacket.getServerList(17, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("QhMs.flag"))));
+                    c.sendPacket(LoginPacket.getServerList(17, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("qilin.flag"))));
                 }
                 if (gui.Qhms.ConfigValuesMap.get("青鳄鱼开关") == 0) {
-                    c.sendPacket(LoginPacket.getServerList(18, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("QhMs.flag"))));
+                    c.sendPacket(LoginPacket.getServerList(18, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("qilin.flag"))));
                 }
                 if (gui.Qhms.ConfigValuesMap.get("花蘑菇开关") == 0) {
-                    c.sendPacket(LoginPacket.getServerList(19, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("QhMs.flag"))));
+                    c.sendPacket(LoginPacket.getServerList(19, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("qilin.flag"))));
                 }
                 c.sendPacket(LoginPacket.getEndOfServerList());
             }
@@ -171,64 +171,64 @@ public class LoginWorker {
         } else {
             c.sendPacket(LoginPacket.getAuthSuccessRequest(c));
             if (gui.Qhms.ConfigValuesMap.get("蓝蜗牛开关") == 0) {
-                c.sendPacket(LoginPacket.getServerList(0, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("QhMs.flag"))));
+                c.sendPacket(LoginPacket.getServerList(0, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("qilin.flag"))));
             }
             if (gui.Qhms.ConfigValuesMap.get("蘑菇仔开关") == 0) {
-                c.sendPacket(LoginPacket.getServerList(1, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("QhMs.flag"))));
+                c.sendPacket(LoginPacket.getServerList(1, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("qilin.flag"))));
             }
             if (gui.Qhms.ConfigValuesMap.get("绿水灵开关") == 0) {
-                c.sendPacket(LoginPacket.getServerList(2, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("QhMs.flag"))));
+                c.sendPacket(LoginPacket.getServerList(2, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("qilin.flag"))));
             }
             if (gui.Qhms.ConfigValuesMap.get("漂漂猪开关") == 0) {
-                c.sendPacket(LoginPacket.getServerList(3, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("QhMs.flag"))));
+                c.sendPacket(LoginPacket.getServerList(3, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("qilin.flag"))));
             }
             if (gui.Qhms.ConfigValuesMap.get("小青蛇开关") == 0) {
-                c.sendPacket(LoginPacket.getServerList(4, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("QhMs.flag"))));
+                c.sendPacket(LoginPacket.getServerList(4, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("qilin.flag"))));
             }
             if (gui.Qhms.ConfigValuesMap.get("红螃蟹开关") == 0) {
-                c.sendPacket(LoginPacket.getServerList(5, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("QhMs.flag"))));
+                c.sendPacket(LoginPacket.getServerList(5, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("qilin.flag"))));
             }
             if (gui.Qhms.ConfigValuesMap.get("大海龟开关") == 0) {
-                c.sendPacket(LoginPacket.getServerList(6, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("QhMs.flag"))));
+                c.sendPacket(LoginPacket.getServerList(6, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("qilin.flag"))));
             }
             if (gui.Qhms.ConfigValuesMap.get("章鱼怪开关") == 0) {
-                c.sendPacket(LoginPacket.getServerList(7, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("QhMs.flag"))));
+                c.sendPacket(LoginPacket.getServerList(7, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("qilin.flag"))));
             }
             if (gui.Qhms.ConfigValuesMap.get("顽皮猴开关") == 0) {
-                c.sendPacket(LoginPacket.getServerList(8, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("QhMs.flag"))));
+                c.sendPacket(LoginPacket.getServerList(8, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("qilin.flag"))));
             }
             if (gui.Qhms.ConfigValuesMap.get("星精灵开关") == 0) {
-                c.sendPacket(LoginPacket.getServerList(9, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("QhMs.flag"))));
+                c.sendPacket(LoginPacket.getServerList(9, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("qilin.flag"))));
             }
             if (gui.Qhms.ConfigValuesMap.get("胖企鹅开关") == 0) {
-                c.sendPacket(LoginPacket.getServerList(10, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("QhMs.flag"))));
+                c.sendPacket(LoginPacket.getServerList(10, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("qilin.flag"))));
             }
             if (gui.Qhms.ConfigValuesMap.get("白雪人开关") == 0) {
-                c.sendPacket(LoginPacket.getServerList(11, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("QhMs.flag"))));
+                c.sendPacket(LoginPacket.getServerList(11, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("qilin.flag"))));
             }
             if (gui.Qhms.ConfigValuesMap.get("石头人开关") == 0) {
-                c.sendPacket(LoginPacket.getServerList(12, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("QhMs.flag"))));
+                c.sendPacket(LoginPacket.getServerList(12, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("qilin.flag"))));
             }
             if (gui.Qhms.ConfigValuesMap.get("紫色猫开关") == 0) {
-                c.sendPacket(LoginPacket.getServerList(13, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("QhMs.flag"))));
+                c.sendPacket(LoginPacket.getServerList(13, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("qilin.flag"))));
             }
             if (gui.Qhms.ConfigValuesMap.get("大灰狼开关") == 0) {
-                c.sendPacket(LoginPacket.getServerList(14, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("QhMs.flag"))));
+                c.sendPacket(LoginPacket.getServerList(14, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("qilin.flag"))));
             }
             if (gui.Qhms.ConfigValuesMap.get("小白兔开关") == 0) {
-                c.sendPacket(LoginPacket.getServerList(15, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("QhMs.flag"))));
+                c.sendPacket(LoginPacket.getServerList(15, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("qilin.flag"))));
             }
             if (gui.Qhms.ConfigValuesMap.get("喷火龙开关") == 0) {
-                c.sendPacket(LoginPacket.getServerList(16, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("QhMs.flag"))));
+                c.sendPacket(LoginPacket.getServerList(16, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("qilin.flag"))));
             }
             if (gui.Qhms.ConfigValuesMap.get("火野猪开关") == 0) {
-                c.sendPacket(LoginPacket.getServerList(17, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("QhMs.flag"))));
+                c.sendPacket(LoginPacket.getServerList(17, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("qilin.flag"))));
             }
             if (gui.Qhms.ConfigValuesMap.get("青鳄鱼开关") == 0) {
-                c.sendPacket(LoginPacket.getServerList(18, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("QhMs.flag"))));
+                c.sendPacket(LoginPacket.getServerList(18, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("qilin.flag"))));
             }
             if (gui.Qhms.ConfigValuesMap.get("花蘑菇开关") == 0) {
-                c.sendPacket(LoginPacket.getServerList(19, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("QhMs.flag"))));
+                c.sendPacket(LoginPacket.getServerList(19, LoginServer.getServerName(), LoginServer.getLoad(), Integer.parseInt(ServerProperties.getProperty("qilin.flag"))));
             }
             c.sendPacket(LoginPacket.getEndOfServerList());
 

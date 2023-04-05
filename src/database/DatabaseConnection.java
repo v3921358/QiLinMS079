@@ -92,9 +92,9 @@ public class DatabaseConnection {
               //  throw new DatabaseException(ex);
             }
             dbDriver = "com.mysql.jdbc.Driver";
-            dbUrl = "jdbc:mysql://" + dbProps.getProperty("QILIN.db.ip")  + ":" +  dbProps.getProperty("QILIN.db.port") + "/" +   dbProps.getProperty("QILIN.db.name")+ "?useUnicode=true&characterEncoding=UTF8";
-            dbUser = dbProps.getProperty("QILIN.db.user");
-            dbPass = dbProps.getProperty("QILIN.db.password");
+            dbUrl = "jdbc:mysql://" + dbProps.getProperty("qilin.db.ip")  + ":" +  dbProps.getProperty("qilin.db.port") + "/" +   dbProps.getProperty("qilin.db.name")+ "?useUnicode=true&characterEncoding=UTF8";
+            dbUser = dbProps.getProperty("qilin.db.user");
+            dbPass = dbProps.getProperty("qilin.db.password");
         }
         try {
             Class.forName(dbDriver); // touch the MySQL driver

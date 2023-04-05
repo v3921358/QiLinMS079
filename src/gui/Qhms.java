@@ -9767,7 +9767,7 @@ public class Qhms extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "持续时间不能为空");
                 return;
             }
-            int 原始经验 = Integer.parseInt(ServerProperties.getProperty("QhMs.expRate"));
+            int 原始经验 = Integer.parseInt(ServerProperties.getProperty("qilin.expRate"));
             int 双倍经验活动 = 原始经验 * 2;
             int seconds = 0;
             int mins = 0;
@@ -9793,7 +9793,7 @@ public class Qhms extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "持续时间不能为空");
                 return;
             }
-            int 原始爆率 = Integer.parseInt(ServerProperties.getProperty("QhMs.dropRate"));
+            int 原始爆率 = Integer.parseInt(ServerProperties.getProperty("qilin.dropRate"));
             int 双倍爆率活动 = 原始爆率 * 2;
             int seconds = 0;
             int mins = 0;
@@ -9818,7 +9818,7 @@ public class Qhms extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "持续时间不能为空");
                 return;
             }
-            int 原始金币 = Integer.parseInt(ServerProperties.getProperty("QhMs.mesoRate"));
+            int 原始金币 = Integer.parseInt(ServerProperties.getProperty("qilin.mesoRate"));
             int 双倍金币活动 = 原始金币 * 2;
             int seconds = 0;
             int mins = 0;
@@ -9843,7 +9843,7 @@ public class Qhms extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "持续时间不能为空");
                 return;
             }
-            int 原始经验 = Integer.parseInt(ServerProperties.getProperty("QhMs.expRate"));
+            int 原始经验 = Integer.parseInt(ServerProperties.getProperty("qilin.expRate"));
             int 三倍经验活动 = 原始经验 * 3;
             int seconds = 0;
             int mins = 0;
@@ -9868,7 +9868,7 @@ public class Qhms extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "持续时间不能为空");
                 return;
             }
-            int 原始爆率 = Integer.parseInt(ServerProperties.getProperty("QhMs.dropRate"));
+            int 原始爆率 = Integer.parseInt(ServerProperties.getProperty("qilin.dropRate"));
             int 三倍爆率活动 = 原始爆率 * 3;
             int seconds = 0;
             int mins = 0;
@@ -9893,7 +9893,7 @@ public class Qhms extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "持续时间不能为空");
                 return;
             }
-            int 原始金币 = Integer.parseInt(ServerProperties.getProperty("QhMs.mesoRate"));
+            int 原始金币 = Integer.parseInt(ServerProperties.getProperty("qilin.mesoRate"));
             int 三倍金币活动 = 原始金币 * 3;
             int seconds = 0;
             int mins = 0;
@@ -11486,7 +11486,7 @@ public class Qhms extends javax.swing.JFrame {
                 ps = con.prepareStatement("SELECT * FROM skills  WHERE characterid =" + this.角色ID.getText() + "");
                 rs = ps.executeQuery();
                 while (rs.next()) {
-                    MapleDataProvider data = MapleDataProviderFactory.getDataProvider(new File(System.getProperty("net.sf.odinms.wzpath") + "/String.wz"));
+                    MapleDataProvider data = MapleDataProviderFactory.getDataProvider(new File(System.getProperty("wzpath") + "/String.wz"));
                     MapleData itemsData;
                     int itemId;
                     String itemName = "";

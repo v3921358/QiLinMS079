@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package database;
 
 import com.alibaba.druid.pool.DruidDataSource;
@@ -31,11 +26,11 @@ public class DBConPool {
     }
 
     public static void InitDB() {
-        dbName = ServerProperties.getProperty("QhMs.db.name", dbName);
-        dbIp = ServerProperties.getProperty("QhMs.db.ip", dbIp);
-        dbport = ServerProperties.getProperty("QhMs.db.port", dbport);
-        dbUser = ServerProperties.getProperty("QhMs.db.user", dbUser);
-        dbPass = ServerProperties.getProperty("QhMs.db.password", dbPass);
+        dbUser = ServerProperties.getProperty("qilin.db.user", dbUser);
+        dbport = ServerProperties.getProperty("qilin.db.port", dbport);
+        dbPass = ServerProperties.getProperty("qilin.db.password", dbPass);
+        dbIp = ServerProperties.getProperty("qilin.db.ip", dbIp);
+        dbName = ServerProperties.getProperty("qilin.db.name", dbName);
     }
 
     private static class InstanceHolder {

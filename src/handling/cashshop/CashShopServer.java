@@ -40,7 +40,7 @@ public class CashShopServer {
 
     public static final void setup() {
         //System.out.println("○ 【正在启动】 游戏商城端口:" + port);
-        port = Short.valueOf(ServerProperties.getProperty("QhMs.cashshop.port", "8600"));
+        port = Short.valueOf(ServerProperties.getProperty("qilin.cashshop.port", "8600"));
         ip = ServerConfig.IP + ":" + port;
         players = new PlayerStorage(-10);
         playersMTS = new PlayerStorage(-20);

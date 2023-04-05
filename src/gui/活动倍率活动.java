@@ -42,7 +42,7 @@ public class 活动倍率活动 {
     }
 
     public static void 经验倍率活动() {
-        int 原始经验 = Integer.parseInt(ServerProperties.getProperty("QhMs.expRate"));
+        int 原始经验 = Integer.parseInt(ServerProperties.getProperty("qilin.expRate"));
         int 经验活动 = 原始经验 * 2;
         int seconds = 0;
         int mins = 0;
@@ -58,7 +58,7 @@ public class 活动倍率活动 {
     }
 
     public static void 爆率倍率活动() {
-        int 原始爆率 = Integer.parseInt(ServerProperties.getProperty("QhMs.dropRate"));
+        int 原始爆率 = Integer.parseInt(ServerProperties.getProperty("qilin.dropRate"));
         int 爆率活动 = 原始爆率 * 2;
         int seconds = 0;
         int mins = 0;
