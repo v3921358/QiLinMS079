@@ -73,9 +73,9 @@ public class MapleFamilyBuff {
      "[對象] 我的队伍\n[时间] 30 分鐘.\n[效果] 同一張地图內的所屬队伍成員經驗值提升 #c2倍#\n* 如果有使用其他加倍這效果將無效."*/
     };
 
-    private final static List<MapleFamilyBuffEntry> buffEntries;
+    private static List<MapleFamilyBuffEntry> buffEntries;
 
-    static {
+    public static void init() {
         buffEntries = new ArrayList<>();
         for (int i = 0; i < event; i++) { //count = 1, questid = 190000+i
             buffEntries.add(new MapleFamilyBuffEntry(i, name[i], desc[i], 1, rep[i], type[i], 190000 + i, duration[i], effect[i]));

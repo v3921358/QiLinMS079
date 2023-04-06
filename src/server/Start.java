@@ -170,7 +170,7 @@ public class Start {
         MapleGuildRanking.getInstance().getJobRank(5);
         MapleGuildRanking.getInstance().getJobRank(6);
         //加载家族Buff 
-        MapleFamilyBuff.getBuffEntry();
+        MapleFamilyBuff.init();
         
          System.out.println("\r\n○ 【正在加载】 -> 游戏倍率信息");
         //显示经验倍率，不能超过100倍
